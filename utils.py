@@ -25,7 +25,7 @@ def dice_loss_2d(y_true, y_pred):
     intersection = tf.reduce_sum(intersection, 0)
     card_y_true = tf.reduce_sum(y_true_f, 0)
     card_y_pred = tf.reduce_sum(y_pred_f, 0)
-    dices = tf.div(2 * intersection, card_y_true + card_y_pred + smooth)
+    dices = tf.math.divide(2 * intersection, card_y_true + card_y_pred + smooth)
     return -tf.reduce_mean(dices)
 
 
@@ -42,7 +42,7 @@ def dice_2d(y_true, y_pred):
     intersection = tf.reduce_sum(intersection, 0)
     card_y_true = tf.reduce_sum(y_true_f, 0)
     card_y_pred = tf.reduce_sum(y_pred_f, 0)
-    dices = tf.div(2 * intersection, card_y_true + card_y_pred)
+    dices = tf.math.divide(2 * intersection, card_y_true + card_y_pred)
     return tf.reduce_mean(dices)
 
 

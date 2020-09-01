@@ -107,8 +107,8 @@ def concatenate_predictions(predict_set, results_name_short, shape_images):
 # Run segmenters
 #####################################
 
-# train_segmenter()
-predict_segmenter()
+train_segmenter()
+#predict_segmenter()
 
 
 

@@ -6,8 +6,8 @@ import os
 import time
 import pickle
 
-from tensorflow import set_random_seed
-set_random_seed(3)
+import tensorflow as tf
+tf.random.set_seed(3)
 
 
 def train_model(params, cv, images, masks, pretrained_model, gpu, results_path, en_test):
@@ -66,12 +66,12 @@ def train_model(params, cv, images, masks, pretrained_model, gpu, results_path, 
                                        monitor='val_' + params['loss'],
                                        save_best_only=False,
                                        save_weights_only=True,
-                                       period=2)
+                                       save_freq='epoch')
 
     hist = model.fit(train_images,
                      train_masks,
                      batch_size=params['batch_size'],
-                     nb_epoch=params['nb_epoch'],
+                     epochs=params['nb_epoch'],
                      verbose=2,
                      shuffle=True,
                      validation_data=(val_images, val_masks),
