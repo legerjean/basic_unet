@@ -11,4 +11,4 @@ An additional input channel can be added to the 2D U-net model in order to repro
 
 This code can be used to partially reproduce the results of the following conference publication (only the 2D part): https://link.springer.com/chapter/10.1007/978-3-030-43195-2_12
 
-![alt text](cartilage_segmentation.png)
+![alt text](cartilage_segmentation.PNG)
