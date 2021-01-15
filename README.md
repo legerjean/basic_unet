@@ -1,4 +1,5 @@
 # basic_unet
+
 This repository shows an example of code for the segmentation of 2D images with 2D u-net in keras. The code supports two classes (i.e., foreground and background).
 
 Get started by creating a folder named "sample". In this folder, insert your images and labels in the "numpy array" format and with the following size (nb samples, width, height). The labels should be binary masks (1 for the foreground and 0 for the background). You can launch the training and prediction from the run.py file.
